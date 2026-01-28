@@ -35,7 +35,7 @@ A modern frontend template using **Vite**, **React 19**, **Redux Toolkit**, **Ty
 1. **Clone the repository**
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/ReyGab/referall-builder.git
 cd vite-template-redux
 
 2. **Install dependencies**
