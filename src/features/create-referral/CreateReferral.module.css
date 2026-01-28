@@ -1,0 +1,24 @@
+.container {
+  padding: 20px;
+}
+
+.paper {
+  width: 40vw;
+  height: 100vh;
+  border-radius: 0;
+}
+
+.referralBox {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px; /* mt: 2 */
+}
+
+.gridTextAlign {
+  text-align: left;
+}
+
+.actionButtons {
+  margin-top: 24px; /* mt: 3 */
+}
