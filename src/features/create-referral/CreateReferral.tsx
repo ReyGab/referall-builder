@@ -11,7 +11,7 @@ import { postReferralApi, updateReferralApi } from "./createReferralSlice"
 import { getReferralsApi } from "../list-referral/listReferralSlice"
 import { useAppDispatch } from "../../app/hooks"
 import { IReferral } from "../../interfaces/referalls.interface"
-import { INITIAL_STATE, CREATE_REFERRAL, UPDATE_REFERRAL } from "./helper"
+import { INITIAL_STATE, CREATE_REFERRAL, UPDATE_REFERRAL } from "./constant"
 import { v4 as uuidv4 } from "uuid"
 import styles from "./CreateReferral.module.css"
 
