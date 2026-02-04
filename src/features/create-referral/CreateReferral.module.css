@@ -12,7 +12,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-top: 16px; /* mt: 2 */
+  margin-top: 16px; 
 }
 
 .gridTextAlign {
@@ -20,5 +20,5 @@
 }
 
 .actionButtons {
-  margin-top: 24px; /* mt: 3 */
+  margin-top: 24px;
 }
