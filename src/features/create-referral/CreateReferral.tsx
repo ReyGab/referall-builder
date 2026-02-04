@@ -1,3 +1,4 @@
+import React, { useMemo } from 'react'
 import type { JSX } from "react"
 import Paper from "@mui/material/Paper"
 import Typography from "@mui/material/Typography"
@@ -7,6 +8,7 @@ import Box from "@mui/material/Box"
 import { Button } from "@mui/material"
 import { Formik, Form } from "formik"
 import FormikTextField from "../../common/FormikTextField/index"
+import { ReferralSchema } from './schema';
 import { postReferralApi, updateReferralApi } from "./createReferralSlice"
 import { getReferralsApi } from "../list-referral/listReferralSlice"
 import { useAppDispatch } from "../../app/hooks"
@@ -23,7 +25,9 @@ export const CreateReferral = ({
 }: ICreateReferralProps): JSX.Element => {
   const dispatch = useAppDispatch()
 
-  const initialValues = referralToEdit ?? INITIAL_STATE
+  const initialValues = useMemo(() => (
+    referralToEdit ?? INITIAL_STATE
+  ), [referralToEdit])
 
   const buttonName = referralToEdit ? UPDATE_REFERRAL : CREATE_REFERRAL
 
@@ -220,14 +224,7 @@ export const CreateReferral = ({
       }}
       enableReinitialize={true}
       validateOnMount={true}
-      validate={values => {
-        const errors: Partial<typeof values> = {}
-        if (!values.givenName) errors.givenName = "Given Name is required"
-        if (!values.surName) errors.surName = "Surname is required"
-        if (!values.email) errors.email = "Email is required"
-        if (!values.phone) errors.phone = "Phone is required"
-        return errors
-      }}
+      validationSchema={ReferralSchema}
     >
       {({ submitForm, isValid }) => {
         return (

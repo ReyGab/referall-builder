@@ -11,7 +11,7 @@ interface BasicTableType {
   children: ReactNode
 }
 
-export const BasicTable = ({ headerCells, children }: BasicTableType) => {
+const BasicTable = ({ headerCells, children }: BasicTableType) => {
   return (
     <TableContainer sx={{ width: "100%" }}>
       <Table sx={{ m: 0, width: "100%" }}>
@@ -27,3 +27,5 @@ export const BasicTable = ({ headerCells, children }: BasicTableType) => {
     </TableContainer>
   )
 }
+
+export default BasicTable;
