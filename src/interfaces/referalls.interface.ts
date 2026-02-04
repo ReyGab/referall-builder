@@ -16,3 +16,13 @@ export interface IReferralSliceState {
   referralInfo: IReferral[] 
   status: "idle" | "loading" | "failed"
 }
+
+export interface IListReferralProps { 
+  setEditingReferral: (referral: IReferral | null) => void
+}
+
+
+export interface ICreateReferralProps {
+  referralToEdit: IReferral | null
+  clearEditing: () => void
+}

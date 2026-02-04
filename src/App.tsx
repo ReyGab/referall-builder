@@ -13,12 +13,10 @@ export const App = () => {
       <div className="App-header">
         <Box sx={{ p: 2 }}>
           <Grid container spacing={8}>
-            {/* Pass editingReferral to CreateReferral */}
             <CreateReferral
               referralToEdit={editingReferral}
               clearEditing={() => setEditingReferral(null)}
             />
-            {/* Pass setEditingReferral to ListReferral */}
             <ListReferral setEditingReferral={setEditingReferral} />
           </Grid>
         </Box>

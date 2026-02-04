@@ -10,20 +10,17 @@ import FormikTextField from "../../common/FormikTextField/index"
 import { postReferralApi, updateReferralApi } from "./createReferralSlice"
 import { getReferralsApi } from "../list-referral/listReferralSlice"
 import { useAppDispatch } from "../../app/hooks"
-import { IReferral } from "../../interfaces/referalls.interface"
+import { IReferral, ICreateReferralProps } from "../../interfaces/referalls.interface"
 import { INITIAL_STATE, CREATE_REFERRAL, UPDATE_REFERRAL } from "./constant"
 import { v4 as uuidv4 } from "uuid"
 import styles from "./CreateReferral.module.css"
 
-type CreateReferralProps = {
-  referralToEdit: IReferral | null
-  clearEditing: () => void
-}
+
 
 export const CreateReferral = ({
   referralToEdit,
   clearEditing,
-}: CreateReferralProps): JSX.Element => {
+}: ICreateReferralProps): JSX.Element => {
   const dispatch = useAppDispatch()
 
   const initialValues = referralToEdit ?? INITIAL_STATE
